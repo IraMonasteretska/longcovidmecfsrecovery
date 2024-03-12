@@ -1,0 +1,204 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: inherit !important;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        color: inherit;
+    }
+}
+
+button:focus,
+input:focus {
+    outline: transparent;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    min-width: 320px;
+    max-width: 100vw;
+    cursor: default;
+    color: #191919;
+    font-family: "Montserrat", sans-serif;
+    line-height: 150%;
+}
+
+.main {
+    flex: 1 1 auto;
+    transition: .4s ease;
+}
+
+.pagewrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+@media(min-width:1500px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1444px;
+    }
+}
+
+h1 {
+    font-family: "Alex Brush", cursive;
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+h2,
+h3 {
+    color: #0558A4;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 130%;
+    text-align: center;
+}
+
+.yellowbtn {
+    transition: 0.3s;
+    display: inline-block;
+    font-size: 16px;
+    color: #004A80;
+    font-weight: 600;
+    border-radius: 10px;
+    background: #FFD364;
+    border: 1px solid #FFD364;
+    padding: 17px 34px;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.2);
+        color: #FFD364;
+    }
+}
+
+.bluebtn {
+    transition: 0.3s;
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+    background: #066CCB;
+    border: 1px solid #066CCB;
+    padding: 17px 34px;
+
+    &:hover {
+        color: #066CCB;
+        background: #fff;
+    }
+}
+
+
+@media(max-width:1599.8px) {
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2,
+    h3 {
+        font-size: 34px;
+    }
+}
+
+@media(max-width:1399.8px) {
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2,
+    h3 {
+        font-size: 28px;
+    }
+
+    
+}
+
+@media(max-width:991.8px) {
+
+    h1 {
+        font-size: 46px;
+
+        br {
+            display: none;
+        }
+    }
+
+    h2,
+    h3 {
+        font-size: 28px;
+    }
+
+    
+}
+
+@media(max-width:575.8px) {
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2,
+    h3 {
+        font-size: 24px;
+    }
+
+    .yellowbtn,
+    .bluebtn {
+        width: 100%;
+        text-align: center;
+    }
+
+    
+}
+
+// animation: pulse1 2s infinite;
+// font-family: "Alex Brush", cursive;
