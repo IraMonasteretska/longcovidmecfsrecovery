@@ -70,7 +70,29 @@ $(document).ready(function () {
     $('.closemenu').click(function(){
         $('.mobmenu').removeClass('show');
     });
-    
+
+
+    // popup ------------------------ //
+    $('.popup__btn').on('click', function () {
+        var indexPopup = $(this).attr('data-popup');
+        $('.popup__window').removeClass('active');
+        $('.' + indexPopup).addClass('active');
+        return false;
+    });
+
+    $('.popup__close').on('click', function () {
+        $('.popup__window').removeClass('active');
+    });
+
+    // close popup ----------------- //
+    $(document).on('click', function (event) {
+        var target = $(event.target);
+
+        if (!target.closest('.popup__body').length) {
+            $('.popup__window').removeClass('active');
+        }
+    });
+
 
 });
 

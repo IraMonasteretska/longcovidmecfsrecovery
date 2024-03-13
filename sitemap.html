@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitemap</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <style>
+    body{
+      background: linear-gradient(120deg, rgb(3, 64, 120), rgb(6, 118, 222));
+    }
+    .sitemap {
+      padding: 60px 50px;
+      border-radius: 20px;
+      background-color: #f2f2f2;
+    }
+
+
+    .sitemap__link {
+      font-size: 24px;
+      padding: 10px 0 ;
+      display: block;
+      color: #004A80;
+      transition: .3s;
+    }
+
+
+    .sitemap__link:hover {
+      opacity: .8;
+    }
+
+    @media(max-width:1440px) {
+      .sitemap__link {
+        font-size: 20px;
+      }
+    }
+
+    @media(max-width:992px) {
+      .sitemap__link {
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+    }
+
+    
+  </style>
+
+  
+<section class="sitemap">
+  <a target="_blank" class="sitemap__link" href="index.html">Home</a>
+  <a target="_blank" class="sitemap__link" href="booking-page.html">Booking page</a>
+</section>
+  
+
+  <script src="js/jquery.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
