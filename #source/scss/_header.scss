@@ -108,6 +108,11 @@ header.header {
 }
 
 @media(max-width:991.8px) {
+    
+    header.header.scrollheader {
+        filter: none;
+    }
+    
     header {
         .container {
             position: relative;
