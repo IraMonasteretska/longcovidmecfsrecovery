@@ -63,6 +63,7 @@ header.header {
 
     &.scrollheader {
         padding: 15px 0;
+        filter: drop-shadow(0 0 10px #d9d9d9);
 
         .header__logo {
             img {
@@ -94,12 +95,6 @@ header.header {
             max-width: 100px;
         }
     }
-
-
-
-
-
-
 }
 
 @media(max-width:1199.8px) {
@@ -151,9 +146,9 @@ header.header {
     
     .mobmenu {
         position: fixed;
-        left: 0;
+        right: 0;
         top: 0;
-        width: 100%;
+        width: 60%;
         height: 100vh;
         background: #fff;
         z-index: 15;
@@ -189,6 +184,12 @@ header.header {
     }
 }
 
+@media(max-width:767.8px) {
+    .mobmenu {
+        width: 80%;
+    }
+}
+
 @media(max-width:575.8px) {
 
     header.header .header__logo img {
@@ -197,10 +198,11 @@ header.header {
 
     header.header.scrollheader {
         padding: 12px 0 20px;
+        box-shadow: 0 0 10px #d9d9d9;
     }
 
     .menubtn {
-        top: 14px;
+        top: 17px !important;
     }
 
     .closemenu {
@@ -224,12 +226,28 @@ header.header {
     }
 
     header.header ul li:last-child a {
-        font-size: 16px;
+        font-size: 15px;
         width: 100%;
         text-align: center;
+        padding: 15px;
     }
 
     .mobmenu {
         padding: 60px 20px 20px 20px;
+    }
+
+    header.header {
+        background: #fff;
+        padding: 10px 0 !important;
+    }
+
+    header.header.scrollheader {
+        .header__logo img {
+            max-width: 80px;
+        }
+    }
+
+    .mobmenu {
+        width: 300px;
     }
 }

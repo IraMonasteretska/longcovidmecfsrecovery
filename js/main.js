@@ -22,7 +22,7 @@ $(document).ready(function () {
             top = $(id).offset().top - 100;
         $('body,html').animate({ scrollTop: top }, 800);
     });
-    
+
     $("footer ul").on("click", "a:not(.normallink)", function (event) {
         event.preventDefault();
         var id = $(this).attr('href'),
@@ -42,13 +42,13 @@ $(document).ready(function () {
 
     var $status = $('.pagingInfo');
     var $slickElement = $('.slideshow');
- 
+
     $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
         var i = (currentSlide ? currentSlide : 0) + 1;
         var $pagingInfo = $('.pagingInfo');
         var $currentSlideSpan = $('<span>').text(i);
         var $slideCountSpan = $('<span>').text(slick.slideCount);
-        
+
         $pagingInfo.empty().append($currentSlideSpan).append('/').append($slideCountSpan);
     });
 
@@ -64,12 +64,17 @@ $(document).ready(function () {
     });
 
 
-    $('.menubtn').click(function(){
+    $('.menubtn').click(function () {
         $('.mobmenu').addClass('show');
+
     });
-    $('.closemenu').click(function(){
+    $('.closemenu').click(function () {
         $('.mobmenu').removeClass('show');
     });
+    $('.header.header ul li a').click(function () {
+        $('.mobmenu').removeClass('show');
+    });
+
 
 
     // popup ------------------------ //
@@ -93,6 +98,41 @@ $(document).ready(function () {
         }
     });
 
+
+
+
+
+
+
+
+    var menuBtn = document.querySelector('.menubtn');
+    var mobMenu = document.querySelector('.header');
+    var overlay = null;
+    
+    menuBtn.addEventListener('click', function() {
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.className = 'overlay';
+            mobMenu.appendChild(overlay);
+            // Додаємо клас 'active' після додавання елемента, щоб запустити анімацію
+            setTimeout(function() {
+                overlay.classList.add('active');
+            }, 10); // Часовий інтервал для уникнення глюків у деяких браузерах
+        }
+    });
+    
+    var closeMenuBtn = document.querySelector('.closemenu');
+    
+    closeMenuBtn.addEventListener('click', function() {
+        if (overlay) {
+            overlay.classList.remove('active');
+            // Після закінчення анімації, видаляємо елемент
+            setTimeout(function() {
+                mobMenu.removeChild(overlay);
+                overlay = null;
+            }, 300); // Час анімації (0.3 секунди)
+        }
+    });
 
 });
 

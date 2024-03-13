@@ -873,6 +873,16 @@ input[type=number] {
         margin-bottom: 30px;
     }
 
+    .subscribesect {
+        background: #f6eeda;
+        margin-top: 0;
+        padding: 50px 0;
+    }
+
+    .contactme {
+        background: #f6eeda;
+    }
+
 }
 
 @media(max-width:360.8px) {
@@ -881,9 +891,22 @@ input[type=number] {
     }
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 
-
-
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
 
 
 // font-family: "Alex Brush", cursive;
