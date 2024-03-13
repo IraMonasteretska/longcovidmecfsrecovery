@@ -104,35 +104,46 @@ $(document).ready(function () {
 
 
 
-
     var menuBtn = document.querySelector('.menubtn');
     var mobMenu = document.querySelector('.header');
     var overlay = null;
-    
-    menuBtn.addEventListener('click', function() {
+
+    menuBtn.addEventListener('click', function () {
         if (!overlay) {
             overlay = document.createElement('div');
             overlay.className = 'overlay';
             mobMenu.appendChild(overlay);
-            // Додаємо клас 'active' після додавання елемента, щоб запустити анімацію
-            setTimeout(function() {
+            setTimeout(function () {
                 overlay.classList.add('active');
-            }, 10); // Часовий інтервал для уникнення глюків у деяких браузерах
+            }, 10);
         }
     });
-    
+
     var closeMenuBtn = document.querySelector('.closemenu');
-    
-    closeMenuBtn.addEventListener('click', function() {
+    var popupCloseBtn = document.querySelector('.popup__close');
+
+    closeMenuBtn.addEventListener('click', closeMenu);
+    popupCloseBtn.addEventListener('click', closeMenu);
+
+    function closeMenu() {
         if (overlay) {
             overlay.classList.remove('active');
-            // Після закінчення анімації, видаляємо елемент
-            setTimeout(function() {
+            setTimeout(function () {
                 mobMenu.removeChild(overlay);
                 overlay = null;
-            }, 300); // Час анімації (0.3 секунди)
+            }, 300);
         }
+    }
+
+    // Додаємо обробник подій для кожного пункту меню
+    var menuItems = document.querySelectorAll('.header ul li a');
+    menuItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+            closeMenu();
+        });
     });
+
+
 
 });
 
