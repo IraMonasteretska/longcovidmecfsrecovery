@@ -58,6 +58,12 @@ footer.footer {
     }
 }
 
+@media(max-width:1399.8px) {
+.footer .yellowbtn{
+    font-size: 15px;
+    padding: 17px 20px;
+}
+}
 @media(max-width:1199.8px) {
     .footer__nav ul {
         max-width: 150px;
