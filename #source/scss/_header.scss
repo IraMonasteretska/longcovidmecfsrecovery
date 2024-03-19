@@ -19,7 +19,8 @@ header.header {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding-top: 20px;
+        padding-top: 28px;
+        transition: 0.3s;
 
         li {
             margin-left: 56px;
@@ -44,7 +45,7 @@ header.header {
                     font-size: 15px;
                     font-weight: 600;
                     display: inline-block;
-                    padding: 15px 25px;
+                    padding: 11px 25px;
                     border-radius: 10px;
                     border: 1px solid #004A80;
                     transition: 0.3s;
@@ -74,6 +75,10 @@ header.header {
         ul li:last-child a {
             padding: 10px 25px;
         }
+
+        ul {
+            padding-top: 10px;
+        }
     }
 }
 
@@ -83,6 +88,10 @@ header.header {
 }
 
 @media(max-width:1599.8px) {
+
+    header.header ul {
+        padding-top: 14px;
+    }
 
     header.header .header__logo img {
         max-width: 130px;
@@ -94,6 +103,17 @@ header.header {
         .header__logo img {
             max-width: 100px;
         }
+    }
+
+    .about {
+        padding: 100px 0 150px;
+        background: url(../img/bg-wave4.png) no-repeat center / auto 100%;
+    }
+}
+
+@media(max-width:1399.8px) {
+    .about__imgsblock .imgwrap:before {
+        bottom: 145px;
     }
 }
 
@@ -187,6 +207,10 @@ header.header {
     header.header ul li:last-child a {
         font-size: 20px;
     }
+
+    header.header ul li:last-child a {
+        padding: 17px 25px;
+    }
 }
 
 @media(max-width:767.8px) {
@@ -250,9 +274,15 @@ header.header {
         .header__logo img {
             max-width: 80px;
         }
+
+        .menubtn {
+            top: 12px !important;
+        }
     }
 
     .mobmenu {
         width: 300px;
     }
+
+   
 }

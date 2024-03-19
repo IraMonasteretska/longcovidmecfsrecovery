@@ -6,13 +6,15 @@
     background: linear-gradient(120deg, rgb(3, 64, 120), rgb(6, 118, 222));
 
     .imgwrap {
+        padding-bottom: 15px;
+
         img {
             max-width: 100%;
         }
     }
 
     h1 {
-        color: #fff;
+        color: #FFD364;
     }
 
     .herosect__descr {
@@ -36,6 +38,7 @@
 
 .subscribesect__information {
     padding-left: 95px;
+    padding-top: 15px;
 
     .title {
         margin: 0 0 10px 0;
@@ -150,6 +153,7 @@
 // --
 .about {
     padding: 100px 0 150px;
+    background: url('../img/bg-wave4.png') no-repeat center / 100% 100%;
 }
 
 .about__info {
@@ -250,11 +254,21 @@
     p {
         position: absolute;
         left: 0;
-        bottom: 0;
+        bottom: -20px;
         width: 225px;
         color: #004A80;
         font-size: 15px;
         font-weight: 500;
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
 }
 
@@ -686,7 +700,7 @@ input[type=number] {
     }
 
     .subscribesect {
-        background: url(../img/bg-wave2.png) no-repeat center / 150% 100%;
+        background: url(../img/bg-wave2.png) no-repeat center / 200% 100%;
     }
 
     .myservice__box {
@@ -745,12 +759,28 @@ input[type=number] {
         padding-left: 0;
     }
 
+    .about {
+        background: url(../img/bg-wave4.png) no-repeat center / auto 100% ;
+        padding-bottom: 120px;
+    }
+
+    .herosect .imgwrap {
+        padding-bottom: 0;
+    }
+
+    .about__imgsblock .imgwrap:before {
+        bottom: 55px;
+    }
 
 }
 
 @media(max-width:767.8px) {
     .about__imgsblock .imgwrap:before {
-        bottom: 115px;
+        bottom: 175px;
+    }
+
+    .about__imgsblock p {
+        width: 195px;
     }
 }
 
@@ -881,6 +911,19 @@ input[type=number] {
 
     .contactme {
         background: #f6eeda;
+    }
+
+    .about {
+        background: #ddefff;
+        padding: 50px 0;
+    }
+
+    .about__imgsblock p {
+        margin-top: 70px;
+    }
+
+    .about__imgsblock .imgwrap {
+        bottom: 170px;
     }
 
 }

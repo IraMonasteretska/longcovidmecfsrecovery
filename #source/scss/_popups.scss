@@ -111,7 +111,6 @@
         display: block;
         margin: 0 auto 50px;
         max-width: 525px;
-        text-align: left;
     }
 
     a {
@@ -167,6 +166,18 @@
     .popup__body .popup__close {
         top: 7px;
         right: 7px;
+    }
+
+    .popup__content p br {
+        display: none;
+    }
+
+    .popup__content h2 {
+        margin-bottom: 10px;
+    }
+
+    .popup__content p {
+        margin-bottom: 30px;
     }
 }
 
