@@ -146,6 +146,7 @@
         margin: 0 auto;
         color: #505050;
         font-size: 17px;
+        font-weight: 500;
         line-height: 130%;
     }
 }
@@ -534,6 +535,7 @@ input[type=number] {
 
         &::placeholder {
             color: #85858C;
+            opacity: 0.6;
         }
 
         &:focus {
