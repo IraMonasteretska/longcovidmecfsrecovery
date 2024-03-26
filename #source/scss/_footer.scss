@@ -58,6 +58,26 @@ footer.footer {
     }
 }
 
+.footer__socials{
+    margin-top: 30px;
+    ul{
+        display: flex;
+        align-items: center;
+        li{
+            margin-right: 30px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        img{
+            width: 41px;
+            height: 41px;
+            border-radius: 50%;
+            background-size: cover;
+        }
+    }
+}
+
 @media(max-width:1599.8px) {
     footer.footer {
         padding: 60px 0;
@@ -104,6 +124,9 @@ footer.footer {
         .col-xl-2 {
             text-align: center !important;
         }
+    }
+    .footer__socials ul {
+        justify-content: center;
     }
 
 }
