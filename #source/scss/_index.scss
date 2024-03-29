@@ -6,7 +6,9 @@
     background: linear-gradient(120deg, rgb(3, 64, 120), rgb(6, 118, 222));
 
     .imgwrap {
-        padding-bottom: 15px;
+        // padding-bottom: 15px;
+        padding-bottom: 0px;
+        height: 100%;
 
         img {
             max-width: 100%;
@@ -18,11 +20,23 @@
     }
 
     .herosect__descr {
+        padding-bottom: 40px;
         p {
             margin-bottom: 30px;
             color: #fff;
             max-width: 716px;
         }
+
+        .cursivetext {
+            color: #fff;
+            transform: rotate(-8deg) translate(0px, -35px);
+            font-size: 85px;
+            line-height: 120%;
+            margin-bottom: 4px;
+            display: block;
+            font-family: "Birthstone", cursive;
+        }
+
     }
 }
 
@@ -762,7 +776,7 @@ input[type=number] {
     }
 
     .about {
-        background: url(../img/bg-wave4.png) no-repeat center / auto 100% ;
+        background: url(../img/bg-wave4.png) no-repeat center / auto 100%;
         padding-bottom: 120px;
     }
 
@@ -787,6 +801,10 @@ input[type=number] {
 }
 
 @media(max-width:575.8px) {
+    .herosect .herosect__descr .cursivetext {
+        font-size: 60px;
+    }
+
     .fscreen {
         padding-top: 150px;
     }
@@ -807,6 +825,7 @@ input[type=number] {
     .subscribesect__information .title {
         font-size: 42px;
     }
+
     .subscribesect__form form {
         flex-wrap: wrap;
     }
@@ -865,7 +884,8 @@ input[type=number] {
         width: 300px;
     }
 
-    .slider-nav .slick-slide .imgwrap, .slider-nav .slick-slide[aria-hidden=true]:not(.slick-cloned)~.slick-cloned[aria-hidden=true] .imgwrap {
+    .slider-nav .slick-slide .imgwrap,
+    .slider-nav .slick-slide[aria-hidden=true]:not(.slick-cloned)~.slick-cloned[aria-hidden=true] .imgwrap {
         width: 100px;
         height: 100px;
     }
