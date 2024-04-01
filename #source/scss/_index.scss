@@ -21,6 +21,7 @@
 
     .herosect__descr {
         padding-bottom: 40px;
+
         p {
             margin-bottom: 30px;
             color: #fff;
@@ -39,6 +40,94 @@
 
     }
 }
+
+// video section ----- //
+
+.videosect {
+    padding: 50px 0 80px;
+    background-color: #fff;
+    position: relative;
+
+    .waveframe {
+        position: absolute;
+        bottom: calc(100% - 3px);
+        left: 0;
+        width: 100%;
+        background-size: cover;
+
+    }
+}
+
+.videosect__title {
+    margin-bottom: 60px;
+}
+
+.plyr--video {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    height: 781px;
+    border-radius: 370px;
+    border: 25px solid #FFF6E0;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(000, 000, 000, .28);
+        background-size: cover;
+        transition: .3s;
+        opacity: 0;
+    }
+
+    &.plyr--paused {
+        &:after {
+            opacity: 1;
+        }
+    }
+}
+
+.plyr--stopped.plyr__poster-enabled .plyr__poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(72%);
+}
+
+.plyr__control--overlaid {
+    background: #066CCB;
+
+    &:hover {
+        background: #066CCB;
+        opacity: 0.7;
+    }
+}
+
+.plyr--video .plyr__control:focus-visible,
+.plyr--video .plyr__control:hover,
+.plyr--video .plyr__control[aria-expanded=true] {
+    background: #066CCB;
+    opacity: 0.7;
+}
+
+.plyr--video .plyr__controls {
+    padding-bottom: 155px !important;
+    // z-index: -1;
+}
+
+.plyr--stopped .plyr__controls {
+    opacity: 0;
+}
+
+.plyr--full-ui input[type=range] {
+    color: #066CCB;
+}
+
+
+
 
 // --
 .subscribesect {
@@ -801,6 +890,27 @@ input[type=number] {
 }
 
 @media(max-width:575.8px) {
+    .plyr--video .plyr__controls {
+        padding-bottom: 130px !important;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .plyr audio,
+    .plyr iframe,
+    .plyr video {
+        transform: scale(1.1);
+    }
+
+    .plyr--video {
+        height: 143vw;
+        border: 17px solid #FFF6E0;
+    }
+
+    .videosect .waveframe {
+        display: none;
+    }
+
     .herosect .herosect__descr .cursivetext {
         font-size: 60px;
     }
